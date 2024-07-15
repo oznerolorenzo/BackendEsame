@@ -23,7 +23,7 @@ class OffertaLavoroController {
 
   async getOfferte(req: Request, res: Response) {
     try {
-      const max: number = parseInt(req.query.max as string) || 10;
+      const max: number = parseInt(req.query.max as string) || 100;
       if (isNaN(max) || max <= 0) {
         return res.status(400).json({ status: 'KO' });
       }
